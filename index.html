@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>欢迎来到我的空间</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--引入Bootstrap库中的核心css文件和js文件-->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <!--自己设置的css样式-->
+    <style>
+        .carousel-item img {
+            width: 100%;
+          }
+        body {
+            width: 90%;
+            background: url(../static/images/bg1.png) no-repeat;
+            background-size: 100%;
+            margin: 4% auto;
+        }
+        a{
+            font-size: 20px;
+        }
+        .bj{
+            background-color: rgba(255,255,255,0.6);
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius:5px ;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);            
+        }
+    </style>
+    <script>
+        function change(name){
+            $("body").css("background","url(../static/images/"+name+")");
+        }
+    </script>
+</head>
+
+<body >
+    <!--设置导航-->
+    <ul class="nav bg-warning">
+            <a class="nav-link text-dark" href="#introduce">简介</a>
+            <a class="nav-link text-dark" href="#photo">相册</a>
+            <a class="nav-link text-dark" href="#music">音乐</a>
+            <a class="nav-link text-dark" href="#program">编程作品</a>
+            <a class="nav-link text-dark" href="#share">知识分享</a>
+            <a class="nav-link text-dark" href="#relax">轻松娱乐</a>
+            <!--一键换肤下拉菜单-->
+            <div class="dropdown">
+                <a class="btn btn-warning dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                一键换肤   
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item"  onclick="change('彩带.png')" >皮肤1</a>
+                    <a class="dropdown-item"  onclick="change('多人.png')" >皮肤2</a>
+                    <a class="dropdown-item"  onclick="change('粉色.jpg')" >皮肤3</a>
+                    <a class="dropdown-item"  onclick="change('蝴蝶.png')" >皮肤4</a>
+                    <a class="dropdown-item"  onclick="change('宇宙.jpg')" >皮肤5</a>
+                    <a class="dropdown-item"  onclick="change('bg1.png')">重置</a>
+                </div>
+            </div>
+    </ul>
+
+    <!--设置轮播图-->
+    <div id="demo" class="carousel slide" data-ride="carousel" data-interval =2000>
+        <!-- 轮播图片 -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="https://code.xueersi.com/live/creator/1?template_project_id=12981814&work_type=xes_classwork&needShare=false&assets_diff=c528df68acf413d62d035636d827ea18">
+                    <img src="../static/images/迷宫游戏.png">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="https://code.xueersi.com/live/creator/1?template_project_id=4230992&work_type=xes_classwork&needShare=false&assets_diff=bbe3b52766f418206968fdf62bd529bb">
+                    <img src="../static/images/打字游戏.png">
+                </a>
+            </div>
+            
+            <div class="carousel-item">
+                <a href="https://code.xueersi.com/live/creator/6449142">
+                    <img src="../static/images/欢乐钢琴.png">
+                </a>
+            </div>
+            
+            <div class="carousel-item">
+                <a href="https://code.xueersi.com/live/creator/1?template_project_id=9776993&work_type=xes_classwork&needShare=false&assets_diff=5875f3afc9b7eb204c24ca38844ed3a1">
+                   <img src="../static/images/智能七巧板.png">
+                 </a>
+            </div>
+        </div>
+        
+        <!-- 左右切换按钮 -->
+          <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <div class="carousel-control-prev-icon"></div>
+          </a>
+          <a class="carousel-control-next" href="#demo" data-slide="next">
+            <div class="carousel-control-next-icon"></div>
+          </a>
+        
+    </div>
+    
+    <!--主体内容-->
+    <div class="row" style="margin-top:10px">
+        <!--左边栏-->
+        <div class="col-sm-3">
+            <!--个人简介-->
+            <div id="introduce" class="bj">
+                <img src="../static/images/王敏.png" style="width:100%">
+                <h4 class="card-title">长发姐姐</h4>
+                <p class="card-text">民族：汉族</p>
+                <p class="card-text">年龄：20岁</p>
+                <p class="card-text">生日：2000.10.20</p>
+                <p class="card-text">爱好:读书、看电影、编程</p>
+                <p class="card-text">优点：乐观开朗、善解人意</p>
+                <p class="card-text">技能：Python、Html、C</p>
+            </div>
+           
+            <!--音乐播放器-->
+            <div id="music" class="bj">
+                <h4 class="card-title">音乐播放器</h4>
+                 BGM1:
+                <audio controls="controls" style="width:100%">
+                    <source src="../static/music/bgm.mp3">
+                </audio>
+                BGM2:
+                <audio controls="controls" style="width:100%">
+                    <source src="../static/music/buttercup.mp3">
+                </audio>
+                BGM2:
+                <audio controls="controls" style="width:100%">
+                    <source src="../static/music/bgm3.mp3">
+                </audio>
+            </div>
+            
+            <!--轻松娱乐-->
+            <div id="relax" class="bj">
+                <h4 class="card-title">轻松娱乐</h4>
+                <p class="card-text"><a href="https://code.xueersi.com/home/project/detail?lang=code&pid=10893671&version=offline&form=python&langType=python">俄罗斯方块</a></p>
+                <p class="card-text"><a href="https://code.xueersi.com/home/project/detail?lang=code&pid=12039937&version=offline&form=python&langType=python">元气骑士迷宫大冒险</a></p>
+                <p class="card-text"><a href="https://code.xueersi.com/home/project/detail?lang=code&pid=11924310&version=hw_pocketcode&form=python&langType=python">欢乐打地鼠</a></p>
+                <p class="card-text"><a href="https://code.xueersi.com/home/project/detail?lang=code&pid=12902937&version=python&form=python&langType=python">荒岛生存模拟器</a></p>
+                <p class="card-text"><a href="https://code.xueersi.com/home/project/detail?lang=code&pid=11996424&version=python&form=python&langType=python">第五人格</a></p>
+                <p class="card-text"><a href="https://code.xueersi.com/home/project/detail?lang=code&pid=13253797&version=python&form=python&langType=python">枪王荣耀</a></p>
+                <p><a href="https://code.xueersi.com/home/project/detail?lang=code&pid=11278424&version=python&form=python&langType=python">井字格</a></p>
+            </div>
+        </div>
+        
+        <!--右边栏-->
+        <div class="col-sm-9">
+            <!--个人相册-->
+            <div id ="photo" class="bj">
+                <h3 ><span><img src="../static/images/相册.png" style="width:60px"></span>个人相册</h3>
+                <div class="card-deck">
+                    <div class="card" >
+                        <img class="card-img-top" src="../static/images/X公路.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                        <p class="card-text">奔跑，美好的一天又开始了。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card" >
+                        <img class="card-img-top" src="../static/images/X蛋糕.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                        <p class="card-text">生日收到了小伙伴订的蛋糕。</p>
+                        </div>
+                    </div>
+                    <div class="card" >
+                        <img class="card-img-top" src="../static/images/X梨花.png" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                        <p class="card-text">春天到了，又是花开的季节。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-deck">
+                    <div class="card" >
+                        <img class="card-img-top" src="../static/images/X烟花.png" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                        <p class="card-text">美丽的烟花难得一见，转瞬即逝。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card" >
+                        <img class="card-img-top" src="../static/images/X猫.png" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                        <p class="card-text">这只机灵的小猫是我快乐的源泉。</p>
+                        </div>
+                    </div>
+                    <div class="card" >
+                        <img class="card-img-top" src="../static/images/X游轮.png" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                        <p class="card-text">坐着小船，感受星辰大海。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--编程作品-->
+            <div id="program" class="bj">
+                <h3 ><span><img src="../static/images/作品.png" style="width:60px"></span>编程作品</h3>
+                <div class="card-deck" style="margin-top:10px">
+                    <div class="card" >
+                        <img class="card-img-top" src="../static/images/沙漠.jpg" alt="Card image" style="width:100%">
+                    </div>
+                    <div class="card" >
+                        <img class="card-img-top" src="../static/images/自行车.jpg" alt="Card image" style="width:100%">
+                
+                    </div>
+                    <div class="card" >
+                        <img class="card-img-top" src="../static/images/彩带.png" alt="Card image" style="width:100%">
+                
+                    </div>
+    
+                </div>
+                <div class="card-deck" style="margin-top:10px">
+                    <div class="card" >
+                        <img class="card-img-top" src="../static/images/音乐.jpg" alt="Card image" style="width:100%">
+    
+                    </div>
+                    <div class="card" >
+                        <img class="card-img-top" src="../static/images/粉色.jpg" alt="Card image" style="width:100%">
+                    </div>
+                    <div class="card" >
+                        <img class="card-img-top" src="../static/images/飞机.png" alt="Card image" style="width:100%">
+                    </div>
+                  
+                </div>
+            </div>
+            
+            <!--编程知识分享-->
+            <div id="share" class="bj">
+                <h3><span><img src="../static/images/分享.png" style="width:60px"></span>编程知识分享</h3>
+                <p class="card-text">魔术师的小袋子里有好多神奇的小玩意，每一个都好玩！</p>
+                <p class="card-text">电脑真是一个非常有趣的东西，我和电脑有着不解之缘，尤其是编程。</p>
+                <p class="card-text">我爸爸是一个电脑工程师，笔记本电脑是他的随身之物，我就对电脑有着痴
+                    迷般的兴趣，从五岁起就开始玩电脑游戏，但开始时因为输给电脑而痛哭流
+                    涕，逐渐电脑成了我的手下败将，这锻炼了我的毅力。</p>
+                <p class="card-text">自从上了初中，同学就跟我谈起了电脑编程序，我当时很羡慕他们，自己也想学，从此我认识了
+                    C站。于是我便开始我的编程之路，开始很简单，可后来，程序就复杂了许
+                    多，我有时真想放弃，可是回想起以前玩电脑游戏时的毅力，我还是一步一
+                    步地走了过来，虽然这条路难走，满是泥泞，遍是荆棘，可我还是用当年学
+                    打游戏时的毅力坚持了过来，因为我知道行百里者半九十，坚持就是胜利，
+                    付出的心血不会白费。</p>
+                <p class="card-text">终于程序学得差不多了，“求公因数”、“阶乘”等都
+                    可以不费吹灰之力地完成，再复杂的程序也不在话下，我在C站上传了许多
+                    我自己做的小游戏，还认识到了许多跟我一样喜爱编程的同学们，同时也
+                    得到了C站老师的夸奖，我真是喜出望外。</p>
+                <p class="card-text">在C站我收获了好多小伙伴，得到了1000个赞，389个粉丝和986条留言，我还和C站的好朋友一起成立了
+                    自己的工作室，实在是太有成就感了！</p>
+           
+            </div>
+        </div>
+  </div>
+</body>
+
+</html>
