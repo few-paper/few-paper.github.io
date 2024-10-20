@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>欢迎来到我的空间</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../static/js/立方体.js"></script>
+
+    <style>
+        .carousel-item img {
+            width: 100%;
+          }
+        body {
+            width: 95%;
+            background-size: 100%;
+            margin: 4% auto;
+        }
+        a{
+            font-size: 18px;
+        }
+        .bj{
+            background-color: rgba(255,255,255,0.6);
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius:5px ;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);            
+        }
+        .bj a{
+            font-size:18px;
+        }
+/*===========跳转区==========*/
+        #private{
+            position:fixed;
+            top: 380px;
+            right: 1%;
+            z-index: 999;
+            width: 5%;
+        }
+        
+/*================================================================================*/
+        p{
+            height: 30px;
+        }
+        img{
+            width: 32.5%;
+        }
+        .work  img{
+            width: 100%;
+        }
+       .work{
+            width: 32.5%;
+            display: inline-block;
+            text-align: center;
+            font-size: 18px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+    <script>
+        function change(name){
+            $("body").css("background","url(../static/images/"+name+")");
+        }
+    </script>
+</head>
+
+<body onload="lft()">
+   <!--设置珍藏照入口-->
+   <a href="privatepic.html"><img  id= "private" src='../static/images/new.png'></a>
+   <!--设置导航-->
+   <ul class="nav bg-warning">
+            <a class="nav-link text-dark" href="#introduce">简介</a>
+            <a class="nav-link text-dark" href="#photo">相册</a>
+            <a class="nav-link text-dark" href="#music">音乐</a>
+            <a class="nav-link text-dark" href="#program">编程作品</a>
+            <a class="nav-link text-dark" href="#share">知识分享</a>
+            <a class="nav-link text-dark" href="#relax">轻松娱乐</a>
+            <!--一键换肤下拉菜单-->
+            <div class="dropdown">
+                <a class="btn btn-warning dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                一键换肤   
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item"  onclick="change('彩带.png')" >皮肤1</a>
+                    <a class="dropdown-item"  onclick="change('背景2.jpg')" >皮肤2</a>
+                    <a class="dropdown-item"  onclick="change('粉色.jpg')" >皮肤3</a>
+                    <a class="dropdown-item"  onclick="change('蝴蝶.png')" >皮肤4</a>
+                    <a class="dropdown-item"  onclick="change('宇宙.jpg')" >皮肤5</a>
+                    <a class="dropdown-item"  onclick="change('bg1.png')">重置</a>
+                </div>
+            </div>
+            <a class="nav-link text-dark" href="#processwork">留言区</a>
+    </ul>
+
+    <!--设置轮播图-->
+    <div id="demo" class="carousel slide" data-ride="carousel" data-interval =2000>
+        <!-- 轮播图片 -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="github.com">
+                    <img src="..\static\images\背景1.jpg">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="github.com">
+                    <img src="..\static\images\背景1.jpg">
+                </a>
+            </div>
+        </div>
+        
+        <!-- 左右切换按钮 -->
+          <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <div class="carousel-control-prev-icon"></div>
+          </a>
+          <a class="carousel-control-next" href="#demo" data-slide="next">
+            <div class="carousel-control-next-icon"></div>
+          </a>
+        
+    </div>
+    
+    <!--主体内容-->
+    <div class="row" style="margin-top:10px">
+        <!--左边栏-->
+        <div class="col-3">
+            <!--个人简介-->
+            <div id="introduce" class="bj">
+                <img src="../static/images/猫娘.png" style="width:100%">
+                <h4 class="card-title">1</h4>
+                <p class="card-text">民族:汉族</p>
+                <p class="card-text">年龄:1</p>
+                <p class="card-text">生日:1</p>
+                <p class="card-text">爱好:1</p>
+                <p class="card-text">优点:1</p>
+                <p class="card-text">技能:1</p>
+            </div>
+            <!--音乐播放器-->
+            <div id="music" class="bj">
+                <h5 class="card-title">音乐播放器</h5>
+                 BGM1:
+                <audio controls="controls" style="width:100%">
+                    <source src="../static/music/bgm.mp3">
+                </audio>
+                BGM2:
+                <audio controls="controls" style="width:100%">
+                    <source src="../static/music/buttercup.mp3">
+                </audio>
+                BGM2:
+                <audio controls="controls" style="width:100%">
+                    <source src="../static/music/bgm3.mp3">
+                </audio>
+            </div>
+            <!--广告-->
+            <div id="ad" class="bj">
+                <a href="github.com">
+                    <img src="..\static\images\背景1.jpg">
+                    <p>1</p>
+                </a>
+                <a href="github.com">
+                    <img src="..\static\images\背景1.jpg">
+                    <p>1</p>
+                </a>
+                <a href="github.com">
+                    <img src="..\static\images\背景1.jpg">
+                    <p>1</p>
+                </a>
+            </div>
+        </div>
+        
+       
+        <!--右边栏-->
+        <div class="col-sm-9">
+            
+            <!--跳转-->
+            <div id="program" class="bj">
+                <h3 ><span><img src="../static/images/作品.png" style="width:50px"></span>编程作品</h3>
+                    <div class="work" >
+                        <a href="github.com"><img src="..\static\images\背景1.jpg"></a>
+                        <p>1</p>
+                    </div>
+                    <div class="work" >
+                        <a href="github.com"><img src="..\static\images\背景1.jpg"></a>
+                        <p>1</p>
+                    </div>
+                    
+                    
+                </div>
+            
+            
+                <!--图-->
+            <div id ="photo" class="bj">
+                <h3 ><span><img src="../static/images/相册.png" style="width:50px"></span>个人相册</h3>
+                <div class="card-deck">
+                    <div class="card" >
+                        <img class="card-img-top" src="..\static\images\背景1.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                        <p class="card-text">1</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card" >
+                        <img class="card-img-top" src="..\static\images\背景1.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                        <p class="card-text">1</p>
+                        </div>
+                    </div>
+                    <div class="card" >
+                        <img class="card-img-top" src="..\static\images\背景1.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                        <p class="card-text">1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <!--编程知识分享-->
+            <div id="share" class="bj">
+                <h3><span><img src="../static/images/分享.png" style="width:50px"></span>编程知识分享</h3>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+           
+            </div>
+        </div>
+  </div>
+ 
+  
+  
+</body>
+
+</html>

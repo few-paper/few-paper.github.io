@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>默契大考验</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <style>
+        body {
+            width: 90%;
+            background: url(../static/images/4.gif);
+            background-size:100%;
+            margin: 4% auto;
+            text-align: left;
+        }
+        .bj{
+            background-color: rgba(255,255,255);
+            border-radius:5px ;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);            
+        }
+        form{
+            background: url(../static/images/大考验.png);
+            background-size:100%;
+            background-repeat: no-repeat;
+            height: 400px;
+            padding-left: 47%;
+            padding-top: 18%;
+        }
+
+    </style>
+</head>
+
+<body>
+           
+    <div class="bj">
+        <form  action="/privatepic">
+            <p>1<span><input  name="who"/></span></p>
+            <p>1<span><input  name="animal"/></span></p>
+            <p>我最爱吃的零食是什么？<span><input  name="food"/></span></p>
+            <button>提交</button>
+        </form>
+    </div>    
+    
+    <!--输入答案正确时显示的内容-->
+    <div class="card-columns">
+        {% for picture in pictures %}
+        <div class="card">
+            <img src="../static/private/{{picture}}" class="card-img-top" >
+        </div>
+        {% endfor %}
+    </div> 
+</body>
+
+</html>
